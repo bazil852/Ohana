@@ -7,6 +7,9 @@
   font-family: 'Poppins', sans-serif;
   color: #fff;
 }
+.iframe-container {
+  height: 100%;
+}
 
 /* Navbar styling */
 .navbar {

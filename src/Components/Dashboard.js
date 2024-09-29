@@ -9,6 +9,7 @@ import profileSchema from '@erc725/erc725.js/schemas/LSP3ProfileMetadata.json';
 import './Dashboard.css';
 import DashboardSection from './DashboardSection';
 import IframeComponent from './IframeComponent';
+import TileChart from './TileChart';
 
 const WalletSection = () => <div className="section-content">Wallet Section Content</div>;
 const HiStudiosSection = () => <div className="section-content">Hi-Studios Section Content</div>;
@@ -82,7 +83,8 @@ const fetchPolygonTokens = async () => {
       const erc725js = new ERC725(
         profileSchema,
         walletAddress,
-        'https://rpc.mainnet.lukso.network',
+        // 'https://rpc.mainnet.lukso.network',
+        'https://rpc.testnet.lukso.network',
         {
           ipfsGateway: 'https://api.universalprofile.cloud/ipfs/',
         }
@@ -140,14 +142,16 @@ const fetchPolygonTokens = async () => {
         return (
           <div>
             <DashboardSection walletAddress={walletAddress} />
-            {renderTokens(polygonTokens, 'Polygon')}
-            {renderTokens(arbitrumTokens, 'Arbitrum')}
+            <TileChart/>
+            {/* {renderTokens(polygonTokens, 'Polygon')}
+            {renderTokens(arbitrumTokens, 'Arbitrum')} */}
           </div>
         );
       case 'Hi-Studios':
         return <IframeComponent src="https://ohana-dao-team-docs.gitbook.io/ohana-dao-info-and-doc" />;
       case 'Gitcoin':
-      return redirectGitbook();
+      // return redirectGitbook();https://explorer.gitcoin.co/#/round/42/7/38
+      return <IframeComponent src="https://explorer.gitcoin.co/#/round/42/7/38" />;
       default:
         return <DashboardSection />;
     }
