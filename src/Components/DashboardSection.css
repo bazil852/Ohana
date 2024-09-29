@@ -1,0 +1,103 @@
+/* Layout styling */
+.dashboard-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  color: #fff;
+}
+
+/* Wallet Overview styling */
+.wallet-overview {
+  flex: 1;
+  margin-right: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* NFT item styling */
+.nft-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.nft-item:hover {
+  transform: scale(1.02);
+}
+
+.nft-image-container {
+  flex-shrink: 0;
+  margin-right: 15px;
+}
+
+.nft-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.nft-info {
+  flex-grow: 1;
+}
+
+.nft-title {
+  font-size: 1.2em;
+  margin: 0;
+  color: #00C9FF;
+}
+
+.nft-description {
+  color: #bbb;
+  font-size: 0.9em;
+}
+
+.nft-stats {
+  text-align: right;
+}
+
+.nft-amount, .nft-points {
+  color: #fff;
+}
+
+/* Points and Reputation styling */
+.points-reputation {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.points-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.points-bar {
+  width: 100%;
+  height: 10px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-left: 10px;
+}
+
+.points-bar-fill {
+  height: 100%;
+  background-color: #00C9FF;
+  border-radius: 5px;
+}
